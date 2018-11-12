@@ -24,9 +24,9 @@ const code = '#';
 client.on('message',async message => {
     if(message.content.startsWith(code + "js")) {
   if(!message.channel.guild) return message.reply(' ');
-    let rank = message.guild.member(message.author).roles.find('name', '• Superme » Support');
-    if (!rank) return message.channel.send(':octagonal_sign: **| يجب ان تمتلك رتبة • Superme » Support لأستخدام هذا الأمر.**');
-    let jscodes = message.guild.channels.find(`name`, "✽-discord-js");
+    let rank = message.guild.member(message.author).roles.find('name', 'Deputy');
+    if (!rank) return message.channel.send(':octagonal_sign: **| يجب ان تمتلك رتبة Deputy لأستخدام هذا الأمر.**');
+    let jscodes = message.guild.channels.find(`name`, "ss");
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
       let filter = m => m.author.id === message.author.id;
       let thisMessage;
@@ -167,7 +167,7 @@ client.on('message', message => {
         .setColor("000000").setColor('#36393e')
         .setDescription(`
 **-------------------
--هذا هو الرابط : https://discord.gg/CACFj5y
+-هذا هو الرابط : https://discord.gg/JZhfFW
 -ارسله للي تحب وحيآك انت وياه
 -ونورنا ياجميل :heart: 
 ------------------- **`)
@@ -190,7 +190,7 @@ client.on('guildMemberAdd', Ammar=> {
     .addField(' 👤  انت رقم',`**[ ${Ammar.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Ammar.guild.name, Ammar.guild.iconURL, true)
-    var channel =Ammar.guild.channels.find('name', '✽-welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
+    var channel =Ammar.guild.channels.find('name', 'ss') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
     });
